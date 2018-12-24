@@ -1,0 +1,303 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700);
+
+$green: #86BB71;
+$blue: #94C2ED;
+$orange: #E38968;
+$gray: #92959E;
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+body {
+  background: #C5DDEB;
+  font: 14px/20px "Lato", Arial, sans-serif;
+  padding: 20px 0;
+  color: white;
+}
+
+.container {
+  margin: 0 auto;
+  width: 750px;
+  background: #444753;
+  border-radius: 5px;
+}
+
+.people-list {
+  width:260px;
+  float: left;
+  overflow-y: auto; 
+  max-height: 532px;
+  .search {
+    padding: 20px;
+  }
+  
+  input {
+    border-radius: 3px;
+    border: none;
+    padding: 14px;
+    color: white;
+    background: #6A6C75;
+    width: 90%;
+    font-size: 14px;
+  }
+  
+  .fa-search {
+    position: relative;
+    left: -25px;
+  }
+  
+  ul {
+    padding: 20px;
+    height: 500px;
+ 
+    
+    
+    
+    li {
+      padding-bottom: 20px;
+    }
+  }
+  
+  img {
+    float: left;
+  }
+  
+  .about {
+    float: left;
+    margin-top: 8px;
+  }
+  
+  .about {
+    padding-left: 8px;
+  }
+  
+  .status {
+    color: $gray;
+  }
+  
+}
+
+.chat {
+  width: 490px;
+  float:left;
+  background: #F2F5F8;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  
+  color: #434651;
+  
+  .chat-header {
+    padding: 20px;
+    border-bottom: 2px solid white;
+    
+    img {
+      float: left;
+    }
+    
+    .chat-about {
+      float: left;
+      padding-left: 10px;
+      margin-top: 6px;
+    }
+    
+    .chat-with {
+      font-weight: bold;
+      font-size: 16px;
+    }
+    
+    .chat-num-messages {
+      color: $gray;
+    }
+    
+    .fa-star {
+      float: right;
+      color: #D8DADF;
+      font-size: 20px;
+      margin-top: 12px;
+    }
+  }
+  
+  .chat-history {
+    padding: 30px 30px 20px;
+    border-bottom: 2px solid white;
+    overflow-y: scroll;
+    height: 300px;
+    
+    .message-data {
+      margin-bottom: 15px;
+    }
+    
+    .message-data-time {
+      color: lighten($gray, 8%);
+      padding-left: 6px;
+    }
+    
+    .message {      
+      color: white;
+      padding: 8px 10px;
+      line-height: 26px;
+      font-size: 16px;
+      border-radius: 7px;
+      margin-bottom: 15px;
+      width: 90%;
+      position: relative;
+      
+      &:after {
+        bottom: 100%;
+        left: 7%;
+        border: solid transparent;
+        content: " ";
+        height: 0;
+        width: 0;
+        position: absolute;
+        pointer-events: none;
+        border-bottom-color: $green;
+        border-width: 10px;
+        margin-left: -10px;
+      }
+    }
+    
+    .my-message {
+      background: $green;
+    }
+    
+    .other-message {
+      background: $blue;
+      
+      &:after {
+        border-bottom-color: $blue;
+        left: 93%;
+      }
+    }
+    
+  }
+  
+  .chat-message {
+    padding: 30px;
+    
+    input[type="text"] {
+      width: 100%;
+      border: none;
+      padding: 10px 20px;
+      font: 14px/22px "Lato", Arial, sans-serif;
+      margin-bottom: 10px;
+      border-radius: 5px;
+      resize: none;
+      background-color: #fff;
+    }
+    
+    .fa-file-o, .fa-file-image-o {
+      font-size: 16px;
+      color: gray;
+      cursor: pointer;
+      
+    }
+    
+    input[type="submit"] {
+      float: right;
+      color: $blue;
+      font-size: 16px;
+      text-transform: uppercase;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+      background: #F2F5F8;
+      
+      &:hover {
+        color: darken($blue, 7%);
+      }
+    }
+  }
+}
+
+.online, .offline, .me {
+    margin-right: 3px;
+    font-size: 10px;
+  }
+  
+.online {
+  color: $green;
+}
+  
+.offline {
+  color: $orange;
+}
+
+.me {
+  color: $blue;
+}
+
+.align-left {
+  text-align: left;
+}
+
+.align-right {
+  text-align: right;
+}
+
+.float-right {
+  float: right;
+}
+
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+}
+
+.chat .chat-history .polly {
+  width: 25px;
+  height: 25px;
+  margin-right: 6px;
+  background-color: #FFFFFF;
+  border-radius: 50%;
+  border: solid 1px #404040;
+  vertical-align: top;
+  outline: none;
+  cursor: pointer;
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTEuMzggMjQ5LjYiPjxkZWZzPjxzdHlsZT4uY2xzLTF7ZmlsbDpub25lO30uY2xzLTJ7ZmlsbDojMjQyZjNlO30uY2xzLTN7ZmlsbDojZWQ3NDIyO30uY2xzLTR7ZmlsbDojZWQ3NTIzO308L3N0eWxlPjwvZGVmcz48dGl0bGU+QXNzZXQgMTwvdGl0bGU+PGcgaWQ9IkxheWVyXzIiIGRhdGEtbmFtZT0iTGF5ZXIgMiI+PGcgaWQ9IkxheWVyXzEtMiIgZGF0YS1uYW1lPSJMYXllciAxIj48cGF0aCBjbGFzcz0iY2xzLTEiIGQ9Ik0xODcuNDQsMTE4LjgzYy0uOTUsMS45Mi0zLjEsMi4yMi00Ljc3LDMuMTYtMTIuMDksNi44My0xOS4wNiwxNi45Mi0xOS4xNSwzMS0uMDYsOS4xNyw1LjI3LDEzLjI5LDE0LjIyLDExLjc0YTM2LjU0LDM2LjU0LDAsMCwwLDEyLjk1LTVjNS41NS0zLjM3LDUuNzEtMy4zLDksMi41YTMuMzMsMy4zMywwLDAsMCwyLjUzLDJjMi42LTYuNjYsNC41Ny0xMy40OSw0LjEzLTIwLjgzYTI1Ljc0LDI1Ljc0LDAsMCwwLTExLjUxLTIwLjU3Yy0xLjExLS43Ny0yLjM0LTEuNTEtMi44My0yLjg5QzE5MC4xMiwxMjAuODIsMTg4LjcxLDEyMCwxODcuNDQsMTE4LjgzWiIvPjxwYXRoIGNsYXNzPSJjbHMtMiIgZD0iTTE2OS4wOCwxNjkuODNjLjM4LTEuMDcuNjItMi40OC0uNzEtM2EyLjM2LDIuMzYsMCwwLDAtMi45MywxLjMxYy0yLjM2LDQuMTktNC42OSw4LjM5LTcsMTIuNTlsLTEwLjc3LDE5LjQzYy0yLjE4LTEuNzYtMi44Ny00LjIxLTQuMDktNi4yNC02LjI2LTEwLjM5LTE0Ljg2LTE3LjgyLTI2LjczLTIwLjkzLTguNTEtMi4yNC0xNy4xLTEuNjMtMjYuMzYuNjRhNjYuOTMsNjYuOTMsMCwwLDAsMTAuNjgtMTcuMUE4MS4yLDgxLjIsMCwwLDAsMTA3LjQyLDEyOWMuMTctMy43NS4yLTMuNzMsNC4xMy00LjQzLDIuMTMtLjM4LDQuMjctLjcxLDYuMzQtMS4yN2EyLjEzLDIuMTMsMCwwLDAsMS43OC0yLjUyLDIuMTYsMi4xNiwwLDAsMC0yLjQ2LTEuM2MtMS44MS4xNi0zLjYyLjQ3LTUuNDIuNzZBNDUuNDEsNDUuNDEsMCwwLDEsOTUsMTIwLjE5Yy0xMi41OS0yLjY0LTIwLjI1LTEwLjU4LTI0LjMxLTIyLjg1Qzc1LjkyLDk4LDgxLDk4LjU1LDg1LjkyLDk2LjljLjk0LS4zMSwxLjg5LS42MSwyLjgtMSw0LTEuNzUsNC4yNy0zLC42MS01LjY1QzgzLDg1LjcxLDc4Ljk0LDgwLDc5LjUsNzEuODdjLjQyLTYuMDcsMi42MS0xMS41Niw2LjYzLTE3LjI3YTM4LjY5LDM4LjY5LDAsMCwwLC4xNywxNC45MSwyMy4wNiwyMy4wNiwwLDAsMCw5LDEzLjg3YzEuMjgsMSwyLjc1LDIuMjYsNC40OSwxLjIsMS41Mi0uOTIsMS4wNy0yLjY1LDEtNC4xMS0uMjgtNi42MywyLTEyLjI2LDYuOTEtMTcuNzMuMzQsMS43Ny40OCwyLjk1Ljc5LDQuMDgsMi40Myw4Ljg0LDguMjMsMTQuNjEsMTYuNTksMTcuOTEsOC44OCwzLjUsMTguMTIsNCwyNy40NCwyLjYyQTMzLjY5LDMzLjY5LDAsMCwxLDE2OC43NCw4OWM3LjQ3LDIuNjMsMTIuMzksOC4wNywxNS40LDE1LjMyYTU2LjI2LDU2LjI2LDAsMCwxLDMuNTQsMTMuOTIsMy4xNSwzLjE1LDAsMCwxLS4yNC41NmMxLjI3LDEuMjEsMi42OCwyLDQuNTksMS4xN2EzLjU4LDMuNTgsMCwwLDEtLjExLS4zNWMtLjctNi42My0yLTEzLjEtNS0xOS4xMi02LjQ4LTEzLTE5LjQtMTguNzctMzMtMTcuMjQtOS4zNiwxLTE4LjU2LDEuMTctMjcuNDMtMi40OXMtMTQuMzktOS44OC0xNC4zOC0yMGMwLTEuNDcuMzQtMy4yNC0xLjM5LTMuOTMtMS41Ni0uNjItMi44My40NS00LDEuNDJBMjYuODIsMjYuODIsMCwwLDAsOTYuOCw3OC4xOGMtMS41OC42Ni0yLjA5LS43Mi0yLjcxLTEuNTFDOTAsNzEuNCw4OSw2NS4yNSw4OS42Myw1OC44MWE0NS4wOCw0NS4wOCwwLDAsMSwyLjIxLTEwLjY5LDYuNDQsNi40NCwwLDAsMCwuMzMtLjkzYy4zLTEuNDQsMS0zLjIyLS41LTQuMDlTODksNDMuNTcsODgsNDQuNzdBNTksNTksMCwwLDAsODAuNiw1NS4zOWE0NS43OCw0NS43OCwwLDAsMC00LjQzLDExLjU1Yy0yLjA5LDkuMjMuMTksMTcsNywyMy41Ni42LjU3LDEuMjIsMS4xMiwyLjI4LDIuMDhBMjAuMDcsMjAuMDcsMCwwLDEsNzEuNzUsOTNjLTEuNzUtLjUyLTMuNjEtMi41LTUuNDYtLjU5cy0uMiwzLjkuMjksNS42NmM0LjUxLDE2LjA5LDE2Ljg4LDI1Ljg3LDMzLjY4LDI2Ljg4LDEsLjA2LDItLjIzLDMuNC44NS0xLjM5LDIwLjczLTYuOCwzOS43NC0yNS4zMiw1Mi42MWEzLjYsMy42LDAsMCwwLDEuMzEsMy4yNmM2LTIuMTgsMTItNC42NiwxOC40MS01LjUxLDE2LjI2LTIuMTYsMjkuNjksMi42MiwzOS41MywxNi4yYTc3LDc3LDAsMCwxLDcuNzUsMTQuMzRjMS4zMiwxLjI5LDIuNDksMCwzLjczLS4yMnE5LjE4LTE2Ljc4LDE4LjM3LTMzLjU3QTIwLjQ2LDIwLjQ2LDAsMCwwLDE2OS4wOCwxNjkuODNaIi8+PHBhdGggY2xhc3M9ImNscy0zIiBkPSJNMjUwLjE0LDEwOC4yNmExMjAuNzYsMTIwLjc2LDAsMCwwLTMxLTY2LjUxYy0yMy44Ni0yNi4zNy01NC0zOS45MS04OS40Mi00MS42M0ExMTcuNjksMTE3LjY5LDAsMCwwLDg5LjA4LDUuNjMsMTI0LjMzLDEyNC4zMywwLDAsMCwyOC40Nyw0Ni4yNSwxMjIuMjEsMTIyLjIxLDAsMCwwLC43MiwxMTIuNjNjLTEuOTUsMTkuMTIsMCwzOCw2LjgxLDU2LjJhMTI1LjgzLDEyNS44MywwLDAsMCwyNiw0Mi41MWM0LDQuMzEsNCw0LjE1LDcuODQsMGExNjguMjcsMTY4LjI3LDAsMCwxLDE2LjEzLTE1LjU3YzYuODMtNS42LDE0LjUyLTkuNzYsMjIuMTEtMTQuMTFhMy4xMSwzLjExLDAsMCwwLTEuMzMtMy4yNWMtOC4xOSwzLTE1LjMsNy44NC0yMi4xMywxMy4wOUExMjEuNTcsMTIxLjU3LDAsMCwwLDM3Ljg5LDIwOUM2LjA4LDE3OC45NC04LjYsMTIwLjE1LDE4LDY5LjQ5YTEyMS42MiwxMjEuNjIsMCwwLDEsMjI4LjcyLDY4Ljg3QzI0MCwyMDIuNDEsMTg5LDIzOC42MSwxNDkuNjcsMjQ0LjZhMTAyLDEwMiwwLDAsMCwxLjgtMTcuNjVjMC02LjkyLjExLTEzLjg3LTIuNC0yMC41bC4xMS0uMmE0LDQsMCwwLDAtMy44NC40Miw4NCw4NCwwLDAsMSwxLjA2LDMxLjU3LDc2LjU3LDc2LjU3LDAsMCwwLTEuMzEsNy44M2MtLjE3LDMuMjguMjcsMy43MywzLjYyLDMuNDZhMTIuMzcsMTIuMzcsMCwwLDAsMS40OS0uMThjMjkuMzMtNi4zOSw1NC0yMC42Miw3Mi45Mi00NC4wOEMyNDYuMDUsMTc2Ljg2LDI1NC45LDE0NC40LDI1MC4xNCwxMDguMjZaIi8+PHBhdGggY2xhc3M9ImNscy00IiBkPSJNMjA3LjA1LDEzOC44MWMtMi04LjgxLTcuMTctMTUuMDgtMTUuMTMtMTkuMTZsLTQuMjQtMS4zOGExNy41NCwxNy41NCwwLDAsMS0zLjU2LDEuNjdjLTEyLjM1LDQuNzktMjMuNjcsMTkuNzMtMjEuODUsMzUuNTguNzksNi45NCw1LjU1LDEyLjgxLDE0LjU4LDEwLjg0YTQ5LjM1LDQ5LjM1LDAsMCwwLDkuOTMtMi45MWMzLjI2LTEuNDcsNi4wOS0zLjY1LDkuMDgtNS41NCwxLjc4LDEuOCwyLjE1LDQsMyw1LjkyLjU4LDEuMjMuODcsMi43MiwyLjQ0LDIuNzMsMS43OSwwLDIuMzItMS41MywyLjc2LTNzMS4wOC0zLjEsMS41MS00LjY5QzIwNy4zOSwxNTIuMjgsMjA4LjU1LDE0NS42MiwyMDcuMDUsMTM4LjgxWm0tMjcuOTEsMjIuODdjLS43OS4yMS0xLjY0LjIyLTIuNDQuMzktNi4xMSwxLjMxLTkuNTUtMS0xMC40My03LjE4LS41My0zLjcuMy03LjI2LDEuMjEtMTAuOC41MS0yLDItMi40NCwzLjgxLTIuMjEsOC42NiwxLjExLDE2LjM2LDQuMDUsMjIsMTEuOTJDMTg5LjQsMTU4LjIsMTg0LjQ0LDE2MC4yMywxNzkuMTQsMTYxLjY4Wm0yMi4xNy0zLjEyYy02LjYyLTEzLjE3LTE2Ljc5LTE5LjU4LTMwLjk0LTIwLjkzLDQuMTUtNi4zMSw4LjY3LTExLjQxLDE1LjYzLTE0YTUuMzMsNS4zMywwLDAsMSw0LjcxLjI1YzcuMjgsMy44LDExLjYyLDkuNjUsMTIuNDMsMTcuOTNBMzguNjEsMzguNjEsMCwwLDEsMjAxLjMxLDE1OC41NloiLz48L2c+PC9nPjwvc3ZnPg==");
+}
+
+.dropbtn {
+    background-color: #3498DB;
+    color: white;
+    padding: 5px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+    background-color: #2980B9;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    float: right;
+    padding-top: 8px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown a:hover {background-color: #ddd}
